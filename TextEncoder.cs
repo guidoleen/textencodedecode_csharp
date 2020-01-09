@@ -5,9 +5,9 @@ namespace EncoderDecoder
 	public static class TextEncoder
 	{
 		private static char INDENTYFIER = '§';
-		private static int KEY_LENGTH = 5;
+		private static int KEY_LENGTH = 7;
 		private static int KEY_MOD = 4;
-		private static string key = "xYz;3hHg%2";
+		private static string key = "aaaaxYz;3hHg%2";
 
 		// Encoder
 		public static string Encode(string input)
@@ -58,7 +58,7 @@ namespace EncoderDecoder
 				salt = salt;
 			}
 			else {
-				salt = salt.Substring(0, key.Length - KEY_LENGTH);
+				salt = salt.Substring(0, salt.Length - KEY_LENGTH);
 			}
 
 			int j = 0;
